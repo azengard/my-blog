@@ -7,29 +7,21 @@
 	<body>
 
 		<div>
-			<h1><a href="">Django Carlitos Blog</a></h1>
+			<h1><a href="/">Django Carlitos Blog</a></h1>
 		</div>
 
+		{% for post in posts %}
 
-		<div>
+			<div>
 
-			<p>Publicado: 14.07.2016, 12:14</p>
-			<h2><a href="">Minha Postagem Modafuka number one</a></h2>
-
-			<p>Hi there!</p>
-			<p>It works! you fucking group of assholes, now go die all of you. :p </p>
-
-		</div>
-
-
-		<div>
-			<p>Publicado: 10.08.2016, 20:18</p>
-
-			<h2><a href="">Meu segundo post que é mais melhor de bom que o primeiro!</a></h2>
-
-			<p>No post de hoje vamos falar da importância de enrolar corretamente seu baseado, começando pela seda...</p>
-
-		</div>
+				<br><br>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title}}</a></h1>
+				<p>{{ post.text|linebreaksbr}}</p>
+		
+			</div>
+		
+			{% endfor %}
 
 	</body>
 
