@@ -2,44 +2,48 @@
 
 <html>
 
-	<head>
+    <head>
 
-		<title>Blog do Carlitos</title>
+        <title>Blog do Carlitos</title>
 
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <h3 class="save">Poemas de Fernando Pessoa.</h3>
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-	</head>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-	<body>
+    </head>
 
-		<div  class="page-header">
+    <body>
 
-			<h1><a href="/">Carlitos Blog in Django</a></h1>
+        <div  class="page-header">
 
-		</div>
+            <a href="{% url 'blog.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 
-		<div class="content container">
+            <h1><a href="/">Carlitos Blog in Django</a></h1>
 
-			<div class="row">
+        </div>
 
-				<div class="col-md-8">
+        <div class="content container">
 
-					{% block content %}
+            <div class="row">
 
-					{% endblock %}
+                <div class="col-md-8">
 
-				</div>
+                    {% block content %}
 
-			</div>
+                    {% endblock %}
 
-		</div>
+                </div>
 
-	</body>
+            </div>
+
+        </div>
+
+    </body>
 
 </html>
