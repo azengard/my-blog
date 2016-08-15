@@ -38,7 +38,7 @@ def post_new(request):
 
             post.save()
 
-            return redirect('blog.views.post_detail', pk=post.pk)
+            return redirect('post_detail', pk=post.pk)
 
     else:
 
@@ -65,7 +65,7 @@ def post_edit(request, pk):
 
             post.save()
 
-            return redirect('blog.views.post_detail', pk=post.pk)
+            return redirect('post_detail', pk=post.pk)
 
     else:
 
