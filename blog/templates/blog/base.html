@@ -26,7 +26,9 @@
 
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 
-            {% endif %}            
+				<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+
+            {% endif %}
 
             <h1><a href="/">Carlitos Blog in Django</a></h1>
 
