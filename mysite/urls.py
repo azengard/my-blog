@@ -19,7 +19,7 @@ from django.contrib.auth import views
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
 
@@ -30,5 +30,5 @@ urlpatterns = patterns('',
 
     url(r'', include('blog.urls')),
 
-)
+]
 
